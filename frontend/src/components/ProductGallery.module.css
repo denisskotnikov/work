@@ -1,0 +1,102 @@
+.gallery {
+  display: flex;
+  min-width: 240px;
+  min-height: 572px;
+  gap: 32px;
+  justify-content: start;
+  width: 780px;
+}
+
+.productImage {
+  aspect-ratio: 1.36;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 12px;
+  min-width: 240px;
+  flex: 1;
+  flex-basis: 0%;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.productImage:hover {
+  transform: scale(1.05);
+}
+
+.productImage:focus {
+  outline: 3px solid #393;
+  outline-offset: 2px;
+}
+
+.zoomContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.zoomedImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #393;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  background: #2a2;
+  outline: none;
+}
+
+.navigationButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #393;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.navigationButton:hover,
+.navigationButton:focus {
+  background: #2a2;
+  outline: none;
+}
